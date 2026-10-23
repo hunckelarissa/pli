@@ -1,0 +1,5 @@
+/* MP010 — aggregate array assign parse stub (exec later) */
+P: PROC OPTIONS(MAIN);
+  DCL (A(3), B(3)) FIXED BIN(31);
+  A = B;
+END P;

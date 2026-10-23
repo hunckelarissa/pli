@@ -6,7 +6,7 @@
 
 ## Context
 
-Классический PL/I с keywords-as-names (`IF THEN THEN = ELSE`) плохо ложится на «чистый» сгенерированный LALR без трюков. Tree-sitter отвергнут как ядро. ANTLR возможен, но семантика контекста keywords всё равно ручная.
+Классический PL/I с keywords-as-names (`IF THEN THEN THEN = ELSE`) плохо ложится на «чистый» сгенерированный LALR без трюков. Tree-sitter отвергнут как ядро. ANTLR возможен, но семантика контекста keywords всё равно ручная.
 
 ## Decision
 

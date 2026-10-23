@@ -1,0 +1,11 @@
+/* MR061 — aggregate STRUCTURE assign (memcpy) */
+P: PROC OPTIONS(MAIN);
+  DCL 1 S,
+        2 A FIXED BIN(31),
+        2 B FIXED BIN(31);
+  DCL 1 T LIKE S;
+  S.A = 3;
+  S.B = 4;
+  T = S;
+  PUT LIST(T.A + T.B);
+END P;

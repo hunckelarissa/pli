@@ -1,0 +1,7 @@
+/* MR032 — GET DATA (names) minimal */
+P: PROC OPTIONS(MAIN);
+  DCL A FIXED BIN(31);
+  DCL B FIXED BIN(31);
+  GET DATA (A, B);
+  PUT LIST(A + B);
+END P;

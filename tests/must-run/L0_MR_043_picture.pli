@@ -1,0 +1,5 @@
+/* MR043 — PUT EDIT P/PICTURE minimal (Z/9) */
+P: PROC OPTIONS(MAIN);
+  DCL N FIXED BIN(31) INIT(42);
+  PUT EDIT (N, N) (P'ZZ9', X(1), P('999'));
+END P;

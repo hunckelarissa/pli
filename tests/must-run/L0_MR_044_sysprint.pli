@@ -1,0 +1,4 @@
+/* MR044 — PUT FILE(SYSPRINT) (default stream alias) */
+P: PROC OPTIONS(MAIN);
+  PUT FILE(SYSPRINT) LIST('ok');
+END P;

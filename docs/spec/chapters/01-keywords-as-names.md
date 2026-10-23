@@ -65,17 +65,18 @@
 ```pli
 X: PROC OPTIONS(MAIN);
   DCL (IF, THEN, ELSE) FIXED BIN(31);
-  IF THEN THEN = ELSE;
+  IF THEN THEN THEN = ELSE;
   ELSE ELSE = THEN;
 END X;
 ```
 
-Нормативное прочтение:
-- `IF` (первое в теле после DCL) — keyword statement;
-- `THEN` после него — **имя** (условие-выражение);
-- `THEN` перед `=` — **имя** (lvalue);
+Нормативное прочтение (`IF THEN THEN THEN = ELSE`):
+- `IF` — keyword statement;
+- первый `THEN` — **имя** (условие-выражение);
+- второй `THEN` — keyword `THEN` конструкции IF;
+- третий `THEN` — **имя** (lvalue присваивания);
 - `ELSE` после `=` — **имя**;
-- `ELSE` (следующий statement) — keyword;
+- следующий `ELSE` — keyword ветки ELSE;
 - и т.д.
 
 Статус на L0: **must-parse**. Must-run — когда типы/присваивания/IF покрыты главами 3–4 и тест явно включён в must-run.

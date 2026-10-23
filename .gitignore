@@ -1,0 +1,54 @@
+# --- Rust / Cargo ---
+/target/
+
+# --- C / link artifacts (libpl1rt + host objects) ---
+**/*.o
+**/*.a
+**/*.lib
+**/*.obj
+**/*.pdb
+**/*.ilk
+**/*.exe
+**/*.dll
+**/*.so
+**/*.dylib
+
+# Generated C from pl1c (keep only runtime sources)
+*.c
+!runtime/**/*.c
+
+# --- Test harness outputs ---
+tests/must-run/*.c
+tests/must-run/*.got
+tests/must-run/*.exe
+tests/must-run/hello*
+tests/must-run/*.dat
+tests/must-fail/*.c
+tests/must-fail/*.got
+tests/must-fail/*.exe
+
+# Scratch I/O files from FILE(…) must-run (cwd = repo root)
+/mr*.dat
+/OUT*
+/*.dat
+/hello*
+/hello.exe
+/hello.c
+
+# --- Local literature archive (PDFs / zips / books) — NOT for GitHub ---
+# Ignore contents; keep the pointer README (parent dir must stay unignored).
+/research/*
+!/research/README.md
+
+# --- IDE / OS ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*~
+
+# --- Agent / local tooling noise (if present) ---
+.cursor/
+*.log

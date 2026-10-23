@@ -1,0 +1,9 @@
+/* MR073 — ADDR of CHAR + BASED CHAR overlay */
+P: PROC OPTIONS(MAIN);
+  DCL C CHAR(2);
+  DCL P POINTER;
+  DCL D CHAR(2) BASED(P);
+  C = 'ok';
+  P = ADDR(C);
+  PUT LIST(D);
+END P;

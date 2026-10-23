@@ -1,0 +1,14 @@
+/* MR042 — DATA in BEGIN: outer+inner names; inner shadow */
+P: PROC OPTIONS(MAIN);
+  DCL A FIXED BIN(31) INIT(0);
+  BEGIN;
+    DCL B FIXED BIN(31) INIT(0);
+    GET DATA;
+    PUT DATA;
+  END;
+  BEGIN;
+    DCL A FIXED BIN(31) INIT(9);
+    DCL Y FIXED BIN(31) INIT(2);
+    PUT SKIP DATA;
+  END;
+END P;

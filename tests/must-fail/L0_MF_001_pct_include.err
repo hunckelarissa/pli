@@ -1,0 +1,1 @@
+error:3:1: preprocessor `%INCLUDE` is not implemented on L0 (see ADR-0009; %INCLUDE planned for L1 / ADR-0011)

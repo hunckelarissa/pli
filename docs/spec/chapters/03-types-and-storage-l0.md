@@ -45,7 +45,7 @@ Implicit / DEFAULT statement — not-implemented на L0.
 | PARAMETER | must-run | storage вне процедуры; см. 3.6 |
 | BASED | must-parse / not-implemented | |
 | CONTROLLED | not-implemented | |
-| DEFINED | not-implemented | |
+| DEFINED | L0 partial (scalar same-type overlay) | MR063 |
 
 `INTERNAL` / `EXTERNAL`: L0 must-run — всё internal в одном модуле; `EXTERNAL` — not-implemented.
 

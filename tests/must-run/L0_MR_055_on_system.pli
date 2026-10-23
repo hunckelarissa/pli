@@ -1,0 +1,7 @@
+/* MR055 — ON ENDFILE SYSTEM → exit(1), no fallthrough */
+P: PROC OPTIONS(MAIN);
+  ON ENDFILE(SYSIN) SYSTEM;
+  PUT LIST('a');
+  SIGNAL ENDFILE(SYSIN);
+  PUT LIST('no');
+END P;

@@ -1,0 +1,5 @@
+P: PROC OPTIONS(MAIN);
+  DCL N FIXED BIN(31) INIT(42);
+  DCL S CHAR(5) INIT('Hi');
+  PUT EDIT (N, S) (F(5), X(1), A);
+END P;

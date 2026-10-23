@@ -1,0 +1,5 @@
+/* MR079 — BIT INIT('1'B) */
+P: PROC OPTIONS(MAIN);
+  DCL B BIT(1) INIT('1'B);
+  PUT LIST(B);
+END P;

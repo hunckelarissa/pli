@@ -1,0 +1,7 @@
+/* MR039 — aggregate array assign */
+P: PROC OPTIONS(MAIN);
+  DCL A(3) FIXED BIN(31) INIT(1, 2, 3);
+  DCL B(3) FIXED BIN(31);
+  B = A;
+  PUT LIST(B(1), B(2), B(3));
+END P;

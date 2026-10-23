@@ -1,0 +1,10 @@
+/* MR058 — STRUCTURE CHAR member assign / PUT */
+P: PROC OPTIONS(MAIN);
+  DCL 1 S,
+        2 N FIXED BIN(31),
+        2 T CHAR(2);
+  S.N = 7;
+  S.T = 'ok';
+  PUT LIST(S.N);
+  PUT SKIP LIST(S.T);
+END P;

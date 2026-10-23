@@ -1,0 +1,6 @@
+/* MR045 ? richer P: drifting $, comma, V.99 */
+P: PROC OPTIONS(MAIN);
+  DCL A FIXED BIN(31) INIT(12345);
+  DCL B FIXED BIN(31) INIT(1234);
+  PUT EDIT (A, B) (P('$ZZ9V99'), X(1), P('ZZ,ZZ9'));
+END P;

@@ -1,0 +1,6 @@
+/* MR034 — PUT DATA without name list (all scalars) */
+P: PROC OPTIONS(MAIN);
+  DCL A FIXED BIN(31) INIT(1);
+  DCL B FIXED BIN(31) INIT(2);
+  PUT DATA;
+END P;

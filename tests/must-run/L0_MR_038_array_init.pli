@@ -1,0 +1,5 @@
+/* MR038 — array INIT list */
+P: PROC OPTIONS(MAIN);
+  DCL A(3) FIXED BIN(31) INIT(10, 20, 30);
+  PUT LIST(A(1), A(2), A(3));
+END P;

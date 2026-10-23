@@ -1,0 +1,7 @@
+P: PROC OPTIONS(MAIN);
+  DCL I FIXED BIN(31);
+  DO I = 1 TO 5;
+    PUT LIST(I);
+    IF I = 2 THEN LEAVE;
+  END;
+END P;

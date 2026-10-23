@@ -1,0 +1,6 @@
+/* MR078 — BIT(8) multi-bit literal / PUT */
+P: PROC OPTIONS(MAIN);
+  DCL B BIT(8);
+  B = '00000101'B;
+  PUT LIST(B);
+END P;

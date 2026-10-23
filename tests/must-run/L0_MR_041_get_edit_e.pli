@@ -1,0 +1,6 @@
+/* MR041 — GET EDIT E (scientific field) */
+P: PROC OPTIONS(MAIN);
+  DCL X FLOAT;
+  GET EDIT (X) (E(12));
+  PUT EDIT (X) (E(12, 2));
+END P;

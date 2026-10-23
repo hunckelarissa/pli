@@ -1,0 +1,8 @@
+/* MR051 — SIGNAL ENDFILE raises ON handler */
+P: PROC OPTIONS(MAIN);
+  ON ENDFILE(SYSIN) GOTO HIT;
+  PUT LIST('a');
+  SIGNAL ENDFILE(SYSIN);
+  PUT LIST('no');
+  HIT: PUT LIST('ok');
+END P;

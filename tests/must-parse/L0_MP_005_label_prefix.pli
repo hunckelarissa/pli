@@ -1,0 +1,7 @@
+/* MP005 — label prefixes (incl. keyword-spelled labels, R4) */
+X: PROC OPTIONS(MAIN);
+  DCL N FIXED BIN(31);
+  START: N = 1;
+  THEN: PUT LIST(N);
+  A: B: N = N + 1;
+END X;

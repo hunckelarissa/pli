@@ -1,0 +1,5 @@
+CHAR5: PROC OPTIONS(MAIN);
+  DCL S CHAR(5);
+  S = 'Hello';
+  PUT LIST(S);
+END CHAR5;

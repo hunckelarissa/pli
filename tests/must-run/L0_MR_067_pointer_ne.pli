@@ -1,0 +1,13 @@
+/* MR067 — POINTER <> NULL compare */
+P: PROC OPTIONS(MAIN);
+  DCL P POINTER;
+  DCL Q POINTER;
+  P = NULL;
+  Q = NULL;
+  IF P <> NULL THEN
+    PUT LIST(0);
+  ELSE IF Q = NULL THEN
+    PUT LIST(1);
+  ELSE
+    PUT LIST(2);
+END P;

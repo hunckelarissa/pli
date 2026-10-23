@@ -1,0 +1,5 @@
+/* MR040 — PUT EDIT SKIP(n) / PAGE / LINE */
+P: PROC OPTIONS(MAIN);
+  PUT EDIT ('A', 'B') (A, SKIP(2), A);
+  PUT EDIT ('Z') (PAGE, LINE(3), A);
+END P;

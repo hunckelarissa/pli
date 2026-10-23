@@ -1,0 +1,11 @@
+/* MR080 — BIT & / | */
+P: PROC OPTIONS(MAIN);
+  DCL A BIT(8);
+  DCL B BIT(8);
+  DCL C BIT(8);
+  A = '00001111'B;
+  B = '00110011'B;
+  C = A & B;
+  PUT LIST(C);
+  PUT SKIP LIST(A | B);
+END P;

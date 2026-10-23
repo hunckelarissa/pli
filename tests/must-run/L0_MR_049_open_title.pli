@@ -1,0 +1,11 @@
+/* MR049 — OPEN TITLE path mapping (+ ENV parse ignore) */
+P: PROC OPTIONS(MAIN);
+  DCL S CHAR(2);
+  OPEN FILE(LOG) OUTPUT STREAM ENV(FB) TITLE('mr049_title.dat');
+  PUT FILE(LOG) LIST('hi');
+  CLOSE FILE(LOG);
+  OPEN FILE(LOG) INPUT STREAM TITLE('mr049_title.dat');
+  GET FILE(LOG) LIST(S);
+  CLOSE FILE(LOG);
+  PUT LIST(S);
+END P;

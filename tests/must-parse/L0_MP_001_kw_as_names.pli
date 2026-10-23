@@ -1,0 +1,8 @@
+/* Classic keywords-as-names (SPEC ch.1.3 / MP001)
+   IF <name THEN> THEN <assign THEN = ELSE> ; ELSE <assign ELSE = THEN> ;
+   (three THENs: condition, keyword, lvalue — see Plauger / IBM folklore) */
+X: PROC OPTIONS(MAIN);
+  DCL (IF, THEN, ELSE) FIXED BIN(31);
+  IF THEN THEN THEN = ELSE;
+  ELSE ELSE = THEN;
+END X;

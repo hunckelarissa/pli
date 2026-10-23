@@ -1,0 +1,5 @@
+/* MP013 — SIGNAL condition parse stub (exec later) */
+P: PROC OPTIONS(MAIN);
+  SIGNAL ENDFILE(SYSIN);
+  SIGNAL ERROR;
+END P;

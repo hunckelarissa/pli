@@ -1,0 +1,10 @@
+/* MP002 — SELECT/WHEN/OTHERWISE parse stub (exec L1) */
+S: PROC OPTIONS(MAIN);
+  DCL X FIXED BIN(31);
+  X = 1;
+  SELECT (X);
+    WHEN (1) PUT LIST('one');
+    WHEN (2, 3) PUT LIST('two');
+    OTHERWISE PUT LIST('other');
+  END;
+END S;

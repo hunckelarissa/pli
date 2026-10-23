@@ -1,0 +1,7 @@
+/* MP009 — array DECLARE parse stub (exec L1) */
+A: PROC OPTIONS(MAIN);
+  DCL X(10) FIXED BIN(31);
+  DCL Y(1:5) FIXED BIN(31);
+  DCL Z(3, 4) FLOAT;
+  DCL (P(2), Q(1:3)) CHAR(8);
+END A;

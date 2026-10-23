@@ -32,7 +32,7 @@
 | `OPEN` / `CLOSE` / `READ` / `WRITE` | n-i | n-i | limited | |
 | `ON` / `SIGNAL` / `REVERT` | n-i | n-i | limited | |
 | `DISPLAY` | n-i | optional | | |
-| `ALLOCATE` / `FREE` | n-i | BASED | | |
+| `ALLOCATE` / `FREE` | L0 partial | BASED scalar FIXED/FLOAT/CHAR | MR062 | |
 | `DEFAULT` | n-i | must-parse | | |
 | `%INCLUDE` | n-i | must-run | | ADR-0009 |
 | `%REPLACE` | n-i | must-run | | |

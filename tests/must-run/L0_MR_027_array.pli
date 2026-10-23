@@ -1,0 +1,9 @@
+/* MR027 — 1D array subscript assign / read (L1 start) */
+P: PROC OPTIONS(MAIN);
+  DCL A(3) FIXED BIN(31);
+  DCL I FIXED BIN(31);
+  DO I = 1 TO 3;
+    A(I) = I * 10;
+  END;
+  PUT LIST(A(1), A(2), A(3));
+END P;

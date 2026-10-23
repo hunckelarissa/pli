@@ -1,0 +1,12 @@
+/* MP015 — STRUCTURE levels + LIKE parse stubs (no codegen) */
+P: PROC OPTIONS(MAIN);
+  DCL 1 PERSON,
+        2 NAME CHAR(8),
+        2 AGE FIXED BIN(31);
+  DCL 1 COPY LIKE PERSON;
+  DCL 1 ROW,
+        2 CELLS(3) FIXED BIN(31);
+  DCL 1 NEST,
+        2 INNER,
+          3 X FIXED BIN(31);
+END P;

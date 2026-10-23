@@ -1,0 +1,7 @@
+P: PROC OPTIONS(MAIN);
+  DCL X FLOAT;
+  DCL Y FLOAT BIN;
+  X = 1.5;
+  Y = 2.5;
+  PUT LIST(X + Y);
+END P;

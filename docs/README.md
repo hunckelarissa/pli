@@ -11,7 +11,9 @@ day-to-day work, **use these `.md` files**.
 
 | Document | Path |
 |----------|------|
-| **What next** | [`NEXT.md`](NEXT.md) |
+| **What next / status** | [`NEXT.md`](NEXT.md) |
+| **Tool version** | [`../VERSION`](../VERSION) |
+| **Changelog** | [`CHANGELOG.md`](CHANGELOG.md) |
 | Technical assignment | [`tz/TZ.md`](tz/TZ.md) |
 | Decisions registry + ADR-0001…0010 | [`decisions/`](decisions/) |
 | SPEC outline | [`spec/OUTLINE.md`](spec/OUTLINE.md) |
@@ -42,7 +44,7 @@ day-to-day work, **use these `.md` files**.
 - `../MANIFEST.md` - product decisions
 - `../LITERATURE.md` - full shelf policy
 - `../STACK.md` - how we build
-- `../research/` - raw archives (do not delete)
+- `../research/` - raw PDF/zip archives (**local only**, not in GitHub; see [`../GIT.md`](../GIT.md))
 
 ## Regeneration of literature extracts
 

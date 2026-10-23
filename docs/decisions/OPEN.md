@@ -20,6 +20,7 @@
 | D7 | Debug / `#line` | `#line` по умолчанию; `--no-line`, `--emit-c`, `--dump-hir` | [0008](ADR-0008-debug-line.md) |
 | D11 | Preprocessor L0 | **Не исполняется**; `%…` → not-implemented | [0009](ADR-0009-preprocessor-l0.md) |
 | D8–D10, D12–D14 | Defaults | Windows+Linux, UTF-8, BIT/POINTER parse-only, … | [0010](ADR-0010-deferred-defaults.md) |
+| D15 | `%INCLUDE` L1 | План включения текстового include (G) | [0011](ADR-0011-include-l1.md) |
 
 Продуктовая рамка: [ADR-0001](ADR-0001-product-direction.md).
 
@@ -39,15 +40,15 @@
 | 0008 | Debug / `#line` |
 | 0009 | Preprocessor L0 |
 | 0010 | Deferred defaults |
+| 0011 | `%INCLUDE` on L1 |
 
 ---
 
 ## Ещё не ADR (следующий берег, не блокер каркаса)
 
 - Детальная текстовая спека каждого узла `hir_v0` → `docs/spec/chapters/07-hir-v0.md`
-- Точная форма простого `DO` на L0 (глава 4.2)
 - Точный CLI surface (`-o`, outdir) — в главе 7.3
-- `%INCLUDE` на L1 — будущий ADR
+- Реализация `%INCLUDE` по ADR-0011
 
 ---
 

@@ -1,7 +1,8 @@
 # Манифест: компилятор подмножества PL/I
 
-**Статус:** концепция (без реализации)  
-**Дата фиксации:** 2026-07-31  
+**Статус:** разработка (скелет `pl1c` + MR001)  
+**Версия инструмента:** см. [`VERSION`](VERSION) (`0.1.0-dev`)  
+**Дата фиксации концепции:** 2026-07-31 · **код с:** 2026-10-21  
 **Проект:** долгосрочный компилятор классического PL/I с траекторией к Subset G
 
 ---
@@ -95,7 +96,7 @@
 
 ### Парсер
 
-- Keywords-as-names (**в том числе в MVP**): `IF THEN THEN = ELSE; ELSE ELSE = THEN;` — валидный целевой класс.  
+- Keywords-as-names (**в том числе в MVP**): `IF THEN THEN THEN = ELSE; ELSE ELSE = THEN;` — валидный целевой класс.  
 - Боль грамматики принята сознательно (как инвестиция, аналогичная ULM).  
 - Инструмент: решать отдельно; ориентир — то, что тянет контекстную роль слов (свой scanner+parser, ANTLR с предикатами и т.п.). Tree-sitter — скорее для редактора, не ядро компилятора.  
 - `pl1gcc` — источник идей по lookahead и keyword-трюкам.
@@ -185,7 +186,7 @@ END ADD;
 /* keywords as names — классика */
 X: PROC OPTIONS(MAIN);
   DCL (IF, THEN, ELSE) FIXED BIN(31);
-  IF THEN THEN = ELSE;
+  IF THEN THEN THEN = ELSE;
   ELSE ELSE = THEN;
 END X;
 ```
@@ -229,10 +230,10 @@ END X;
 1. ~~must-run / must-parse~~ → `08-test-catalog-l0.md`  
 2. ~~OPEN / ADR~~ → ADR-0001…0010  
 3. ~~Главы SPEC L0 core~~ → `01`…`04-05-06`, `03`, `07`  
-4. По явной команде («делай скелет pl1c»): код **`pl1c` + `libpl1rt`**, KPI = MR001  
-5. Опционально ещё документы: L1 arrays draft — см. `docs/NEXT.md`  
+4. ~~Скелет pl1c~~ → `compiler/` + `runtime/`; **MR001 OK** (`tools/run_mr001.ps1`)  
+5. Дальше по коду: MR002+ (см. `docs/NEXT.md`)  
 
-**Документальный gate L0 закрыт.** Лицензия Apache-2.0: корневой `LICENSE`.
+**Версия:** [`VERSION`](VERSION). Лицензия Apache-2.0: [`LICENSE`](LICENSE).
 
 ---
 

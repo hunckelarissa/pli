@@ -1,0 +1,10 @@
+/* MR057 — LIKE copies STRUCTURE layout */
+P: PROC OPTIONS(MAIN);
+  DCL 1 S,
+        2 A FIXED BIN(31),
+        2 B FIXED BIN(31);
+  DCL 1 T LIKE S;
+  T.A = 3;
+  T.B = 4;
+  PUT LIST(T.A + T.B);
+END P;

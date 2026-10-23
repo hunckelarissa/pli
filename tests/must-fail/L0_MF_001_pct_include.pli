@@ -1,0 +1,5 @@
+/* MF001 — %INCLUDE must fail on L0 (ADR-0009 / ADR-0011) */
+%INCLUDE 'nosuch.pli';
+X: PROC OPTIONS(MAIN);
+  PUT LIST('x');
+END X;

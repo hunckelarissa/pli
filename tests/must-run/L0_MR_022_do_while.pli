@@ -1,0 +1,7 @@
+P: PROC OPTIONS(MAIN);
+  DCL I FIXED BIN(31) INIT(0);
+  DO WHILE (I < 3);
+    I = I + 1;
+    PUT LIST(I);
+  END;
+END P;

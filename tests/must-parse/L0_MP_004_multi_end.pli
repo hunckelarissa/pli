@@ -1,0 +1,8 @@
+/* MP004 — classic multi-level END name closes nested scopes */
+OUTER: PROC OPTIONS(MAIN);
+  DCL N FIXED BIN(31);
+  N = 1;
+  DO;
+    BEGIN;
+      PUT LIST(N);
+    END OUTER;

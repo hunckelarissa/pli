@@ -1,0 +1,7 @@
+P: PROC OPTIONS(MAIN);
+  DCL I FIXED BIN(31);
+  DO I = 1 TO 3;
+    IF I = 2 THEN ITERATE;
+    PUT LIST(I);
+  END;
+END P;

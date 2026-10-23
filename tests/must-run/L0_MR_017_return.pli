@@ -1,0 +1,12 @@
+MAINP: PROC OPTIONS(MAIN);
+  CALL T();
+  PUT LIST('m');
+  RETURN;
+  PUT LIST('x');
+END MAINP;
+
+T: PROC;
+  PUT LIST('t');
+  RETURN;
+  PUT LIST('y');
+END T;

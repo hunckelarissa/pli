@@ -1,0 +1,9 @@
+/* MR060 — STRUCTURE FLOAT member */
+P: PROC OPTIONS(MAIN);
+  DCL 1 S,
+        2 X FLOAT BIN,
+        2 Y FLOAT BIN;
+  S.X = 1.5;
+  S.Y = 2.5;
+  PUT LIST(S.X + S.Y);
+END P;

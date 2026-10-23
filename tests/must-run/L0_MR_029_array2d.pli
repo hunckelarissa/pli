@@ -1,0 +1,10 @@
+/* MR029 — 2D array + RANGE lower bound */
+P: PROC OPTIONS(MAIN);
+  DCL A(2, 3) FIXED BIN(31);
+  DCL B(0:2) FIXED BIN(31);
+  A(1, 1) = 11;
+  A(2, 3) = 23;
+  B(0) = 7;
+  B(2) = 9;
+  PUT LIST(A(1, 1), A(2, 3), B(0), B(2));
+END P;

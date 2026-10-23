@@ -1,0 +1,5 @@
+P: PROC OPTIONS(MAIN);
+  PUT LIST('ok');
+  STOP;
+  PUT LIST('no');
+END P;

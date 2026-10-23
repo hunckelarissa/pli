@@ -1,0 +1,7 @@
+/* MP006 — GET LIST parse stub (exec later) */
+G: PROC OPTIONS(MAIN);
+  DCL (A, B) FIXED BIN(31);
+  DCL S CHAR(8);
+  GET LIST(A, B);
+  GET SKIP LIST(S);
+END G;

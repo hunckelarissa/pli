@@ -1,0 +1,9 @@
+/* MP007 — PUT/GET EDIT parse stubs (exec later) */
+E: PROC OPTIONS(MAIN);
+  DCL N FIXED BIN(31);
+  DCL S CHAR(8);
+  N = 42;
+  S = 'Hello';
+  PUT EDIT (N, S) (F(5), X(1), A);
+  GET EDIT (N) (F(3));
+END E;

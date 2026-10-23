@@ -37,9 +37,10 @@ must-run.
 2. **Counted:** `DO var = exp1 TO exp2;` … `END;`  
    - шаг по умолчанию `+1`;  
    - `BY exp` — must-run если успеем; иначе BY — not-implemented на первом срезе (предпочтительно поддержать BY константу).  
-3. `WHILE` / `UNTIL` / `DO i = … TO … WHILE` — L1 или not-implemented на L0.
+3. `DO WHILE (expr);` / `DO UNTIL (expr);` — must-run (простые формы).  
+4. `DO i = … TO … WHILE` (комбинации) — L1 / not-implemented на L0.
 
-**Решение L0:** must-run = (1) и (2) с целым FIXED var и TO; **BY** — must-run для целочисленного шага; WHILE/UNTIL — not-implemented.
+**Решение L0:** must-run = (1)–(3) с целым FIXED var и TO; **BY** — must-run для целочисленного шага.
 
 ### Status
 

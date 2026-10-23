@@ -1,0 +1,8 @@
+/* MR028 — GET EDIT F/A/X minimal */
+P: PROC OPTIONS(MAIN);
+  DCL N FIXED BIN(31);
+  DCL S CHAR(3);
+  GET EDIT (N, S) (F(3), X(1), A(3));
+  PUT LIST(N);
+  PUT SKIP LIST(S);
+END P;

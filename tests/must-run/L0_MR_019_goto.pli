@@ -1,0 +1,8 @@
+P: PROC OPTIONS(MAIN);
+  GOTO SKIP;
+  PUT LIST('no');
+  SKIP: PUT LIST('ok');
+  GO TO DONE;
+  PUT LIST('x');
+  DONE: RETURN;
+END P;

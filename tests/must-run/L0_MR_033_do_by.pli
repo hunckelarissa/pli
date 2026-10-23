@@ -1,0 +1,7 @@
+/* MR033 — DO I = from TO to BY step */
+P: PROC OPTIONS(MAIN);
+  DCL I FIXED BIN(31);
+  DO I = 1 TO 5 BY 2;
+    PUT LIST(I);
+  END;
+END P;

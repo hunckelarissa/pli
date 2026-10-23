@@ -1,0 +1,8 @@
+/* MP003 — BIT / POINTER / BASED parse stubs (no codegen) */
+X: PROC OPTIONS(MAIN);
+  DCL P POINTER;
+  DCL B BIT(8);
+  DCL Q PTR;
+  DCL X FIXED BIN(31) BASED(P);
+  DCL Y CHAR(4) BASED;
+END X;

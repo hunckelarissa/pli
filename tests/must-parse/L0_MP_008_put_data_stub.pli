@@ -1,0 +1,9 @@
+/* MP008 — PUT/GET DATA parse stubs (exec later) */
+D: PROC OPTIONS(MAIN);
+  DCL (A, B) FIXED BIN(31);
+  A = 1;
+  B = 2;
+  PUT DATA (A, B);
+  PUT SKIP DATA;
+  GET DATA (A);
+END D;

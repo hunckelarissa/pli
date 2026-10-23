@@ -1,0 +1,10 @@
+/* SELECT without select-expression: WHEN exprs are truth tests */
+P: PROC OPTIONS(MAIN);
+  DCL A FIXED BIN(31) INIT(0);
+  DCL B FIXED BIN(31) INIT(1);
+  SELECT;
+    WHEN (A) PUT LIST('a');
+    WHEN (B) PUT LIST('b');
+    OTHERWISE PUT LIST('c');
+  END;
+END P;

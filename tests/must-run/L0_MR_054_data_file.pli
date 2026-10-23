@@ -1,0 +1,16 @@
+/* MR054 — PUT/GET DATA FILE(f) round-trip */
+P: PROC OPTIONS(MAIN);
+  DCL A FIXED BIN(31);
+  DCL B FIXED BIN(31);
+  OPEN FILE(F) OUTPUT STREAM TITLE('mr054.dat');
+  A = 3;
+  B = 4;
+  PUT FILE(F) DATA (A, B);
+  CLOSE FILE(F);
+  A = 0;
+  B = 0;
+  OPEN FILE(F) INPUT STREAM TITLE('mr054.dat');
+  GET FILE(F) DATA (A, B);
+  CLOSE FILE(F);
+  PUT LIST(A + B);
+END P;

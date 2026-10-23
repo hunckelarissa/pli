@@ -1,0 +1,7 @@
+/* Multi-level END name — must-run */
+OUTER: PROC OPTIONS(MAIN);
+  DCL N FIXED BIN(31) INIT(9);
+  DO;
+    BEGIN;
+      PUT LIST(N);
+    END OUTER;

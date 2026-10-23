@@ -1,0 +1,8 @@
+H: PROC OPTIONS(MAIN);
+  DCL X FIXED BIN(31);
+  X = 2;
+  IF X = 2 THEN
+    PUT LIST(1);
+  ELSE
+    PUT LIST(0);
+END H;

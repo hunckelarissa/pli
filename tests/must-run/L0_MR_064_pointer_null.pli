@@ -1,0 +1,17 @@
+/* MR064 — POINTER assign / NULL enquiry */
+P: PROC OPTIONS(MAIN);
+  DCL P POINTER;
+  DCL Q POINTER;
+  DCL X FIXED BIN(31) BASED(Q);
+  P = NULL;
+  IF P = NULL THEN
+    DO;
+      ALLOCATE X SET(P);
+      Q = P;
+      X = 3;
+      PUT LIST(X);
+      FREE X;
+    END;
+  ELSE
+    PUT LIST(0);
+END P;

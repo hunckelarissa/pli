@@ -1,0 +1,10 @@
+/* MR059 — nested STRUCTURE level-3 (S.N.A) */
+P: PROC OPTIONS(MAIN);
+  DCL 1 S,
+        2 N,
+          3 A FIXED BIN(31),
+          3 B FIXED BIN(31);
+  S.N.A = 2;
+  S.N.B = 5;
+  PUT LIST(S.N.A + S.N.B);
+END P;

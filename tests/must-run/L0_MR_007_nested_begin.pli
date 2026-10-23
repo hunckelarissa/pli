@@ -1,0 +1,9 @@
+P: PROC OPTIONS(MAIN);
+  DCL X FIXED BIN(31);
+  X = 1;
+  BEGIN;
+    DCL Y FIXED BIN(31);
+    Y = X + 1;
+    PUT LIST(Y);
+  END;
+END P;

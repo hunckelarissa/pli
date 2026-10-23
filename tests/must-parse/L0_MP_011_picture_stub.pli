@@ -1,0 +1,6 @@
+/* MP011 — P/PICTURE edit format parse stub (exec later) */
+P: PROC OPTIONS(MAIN);
+  DCL N FIXED BIN(31) INIT(42);
+  PUT EDIT (N) (P'ZZ9');
+  PUT EDIT (N) (P('$$$9'));
+END P;

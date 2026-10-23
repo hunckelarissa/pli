@@ -1,0 +1,9 @@
+/* MR053 — ON ENDFILE SNAP no-op, then GOTO handler wins */
+P: PROC OPTIONS(MAIN);
+  ON ENDFILE(SYSIN) SNAP;
+  ON ENDFILE(SYSIN) GOTO HIT;
+  PUT LIST('a');
+  SIGNAL ENDFILE(SYSIN);
+  PUT LIST('no');
+  HIT: PUT LIST('ok');
+END P;

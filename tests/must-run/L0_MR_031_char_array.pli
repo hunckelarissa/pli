@@ -1,0 +1,7 @@
+/* MR031 — CHAR array subscript */
+P: PROC OPTIONS(MAIN);
+  DCL S(2) CHAR(3);
+  S(1) = 'Hi';
+  S(2) = 'Yo';
+  PUT LIST(S(1), S(2));
+END P;

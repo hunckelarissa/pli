@@ -1,0 +1,6 @@
+P: PROC OPTIONS(MAIN);
+  DO;
+    PUT LIST('a');
+    PUT LIST('b');
+  END;
+END P;

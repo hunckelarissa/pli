@@ -1,0 +1,11 @@
+/* STATIC persists across CALL; AUTOMATIC would reset each entry. */
+MAINP: PROC OPTIONS(MAIN);
+  CALL TICK();
+  CALL TICK();
+END MAINP;
+
+TICK: PROC;
+  DCL C FIXED BIN(31) STATIC;
+  C = C + 1;
+  PUT LIST(C);
+END TICK;

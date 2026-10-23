@@ -1,0 +1,9 @@
+/* MR069 — ADDR builtin sets POINTER for BASED overlay */
+P: PROC OPTIONS(MAIN);
+  DCL X FIXED BIN(31);
+  DCL P POINTER;
+  DCL Y FIXED BIN(31) BASED(P);
+  X = 8;
+  P = ADDR(X);
+  PUT LIST(Y);
+END P;

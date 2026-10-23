@@ -1,47 +1,35 @@
-# NEXT — что делать после берега L0
+# NEXT — статус после скелета
 
-**Дата:** 2026-08-05  
-**Статус документов L0:** gate закрыт (ТЗ + ADR + SPEC core + матрица G).
-
----
-
-## Сделано на берегу
-
-- Манифест / STACK / LITERATURE / `docs/` / `research/`  
-- ТЗ, ADR-0001…0010  
-- SPEC: intro, G-matrix, keywords, program structure, statements table, types, control/IO, HIR, tests  
+**Дата:** 2026-10-21  
+**Версия инструмента:** `0.1.0-dev` ([`VERSION`](../VERSION), `pl1c --version`)
 
 ---
 
-## Развилка
+## Сделано
 
-### A. Продолжать только документы (ещё берег)
+- Документальный берег L0 (SPEC / ADR / TZ)
+- Скелет: `compiler/` (`pl1c`), `runtime/` (`libpl1rt`)
+- **MR001–003, 005–079** OK; **MP001–016** (+ BIT(8) / INIT / BASED BIT)
+- Changelog: [`CHANGELOG.md`](CHANGELOG.md) for `0.1.0-dev`
+- **MF001** `%` n-i
+- Loop `/loop 5m продолжай` — активен (PID 24092, 300s)
+- must-run: optional `.exitcode` sibling (default 0)
 
-- Углубить multi-END, полный список abbrev keywords  
-- Черновик L1 (arrays/structures) без кода  
-- Больше текстов must-run в `08-…`  
+## Текущий срез языка в коде
 
-### B. Скелет продукта (код) — нужна фраза вроде «делай скелет pl1c»
+`PROC[(params)] OPTIONS(MAIN)?` · `DCL FIXED BIN` / `FLOAT` / `CHAR(n)` / `BIT(1..8)` + `'…'B` / arrays (FIXED/FLOAT/CHAR) · `POINTER` + `NULL`/`NULL()`/`ADDR`/`INIT(NULL)` + assign · `BASED(P)` FIXED/FLOAT/CHAR/BIT/STRUCTURE(+nest/LIKE) + `ALLOCATE`/`FREE` · `DEFINED`/`DEF` scalar (incl. on BASED / CHAR) · STRUCTURE levels 1..=3 (FIXED/FLOAT/CHAR) + `S.N.A` / `LIKE` / aggregate `T = S` · `STATIC`/`AUTO` · `INIT`/`INITIAL` · label: · `GOTO`/`GO TO` · `;` null · assign / `A(i)=` · arith/relops · `IF` · `SELECT`/`SELECT;` · `DO;` / `DO WHILE` / `DO UNTIL` / `DO…TO`/`BY` · `LEAVE`/`ITERATE` · `RETURN`/`STOP` · `BEGIN` · `OPEN`/`CLOSE FILE` + `TITLE('path')` / `ENV(…)` + `PUT`/`GET FILE(f)` LIST/EDIT/DATA · edit F/A/E/X/COLUMN/PAGE/LINE/SKIP/P($,V,comma) · `ON ENDFILE` (GOTO/BEGIN/SNAP/null/SYSTEM→exit) / `SIGNAL`/`REVERT ENDFILE` · `CALL` (by-ref) · `END` / multi-`END name` · `%…` rejected (L0) · keywords-as-names (parse)
 
-Минимальный вертикальный срез:
+## Дальше (код)
 
-```text
-compiler/   (Rust: pl1c driver, lex, parse stub, hir, codegen_c stub)
-runtime/    (C: libpl1rt — put_list, start)
-tests/      (MR001 hello — цель первого зелёного)
-LICENSE     Apache-2.0
-Cargo.toml / CMake
+1. BIT `&` / `|` ops stub  
+2. BIT `^` compare polish  
+3. DEFINED BIT overlay polish
+
+```powershell
+powershell -File tools/run_must_run.ps1
 ```
 
-Первый KPI кода: **MR001 hello** → бинарник (даже с узким парсером только под hello, затем расширение по SPEC).
+## Версия
 
-### C. Параллельно
-
-ULM Modula-2 не смешивать с этим репо.
-
----
-
-## Рекомендация
-
-Документальный берег L0 **достаточен**. Дальнейшая отдача — от **B** (скелет).  
-Без явной команды на код агент остаётся в зоне A.
+1. [`VERSION`](../VERSION)  
+2. `pl1c --version`

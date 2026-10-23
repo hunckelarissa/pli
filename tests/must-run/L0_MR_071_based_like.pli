@@ -1,0 +1,13 @@
+/* MR071 — BASED STRUCTURE LIKE template */
+P: PROC OPTIONS(MAIN);
+  DCL P POINTER;
+  DCL 1 S,
+        2 A FIXED BIN(31),
+        2 B FIXED BIN(31);
+  DCL 1 T BASED(P) LIKE S;
+  ALLOCATE T SET(P);
+  T.A = 3;
+  T.B = 4;
+  PUT LIST(T.A + T.B);
+  FREE T;
+END P;

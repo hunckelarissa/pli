@@ -1,0 +1,8 @@
+G: PROC OPTIONS(MAIN);
+  DCL A FIXED BIN(31);
+  A = 0;
+  IF A THEN
+    PUT LIST('t');
+  ELSE
+    PUT LIST('f');
+END G;

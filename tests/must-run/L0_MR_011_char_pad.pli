@@ -1,0 +1,9 @@
+/* CHAR pad (short) + truncate (long) */
+P: PROC OPTIONS(MAIN);
+  DCL A CHAR(5);
+  DCL B CHAR(3);
+  A = 'Hi';
+  B = 'ABCDEF';
+  PUT LIST(A);
+  PUT SKIP LIST(B);
+END P;

@@ -1,0 +1,9 @@
+P: PROC OPTIONS(MAIN);
+  DCL X FIXED BIN(31);
+  X = 2;
+  SELECT (X);
+    WHEN (1) PUT LIST('a');
+    WHEN (2, 3) PUT LIST('b');
+    OTHERWISE PUT LIST('c');
+  END;
+END P;

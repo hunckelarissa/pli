@@ -1,0 +1,13 @@
+[package]
+name = "pl1c"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "PL/I-G compiler (transpile to C)"
+default-run = "pl1c"
+
+[[bin]]
+name = "pl1c"
+path = "src/main.rs"
+
+[dependencies]

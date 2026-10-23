@@ -1,0 +1,7 @@
+ADD: PROC OPTIONS(MAIN);
+  DCL (A, B, C) FIXED BIN(31);
+  A = 2;
+  B = 3;
+  C = A + B;
+  PUT LIST(C);
+END ADD;
